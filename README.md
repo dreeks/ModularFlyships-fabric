@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This fabric mod adds a vehicule that can fly around the world at different spead, is upgradable with chest storage, furnaces and such, and even more!
+This fabric mod adds a vehicle that can fly around the world at different speed, is upgradable with chest storage, furnaces and such, and even more!
 
 ## How to play
 
@@ -12,7 +12,7 @@ If you want to try it nonetheless, you can compile it yourself like any fabric m
 
 ## License
 
-    Modular Flyships - A Minecraft mod about flying vehicule
+    Modular Flyships - A Minecraft mod about flying vehicle
     Copyright (C) 2020 - Team Dreeks (Nathan <Oxodao> JANCZEWSKI, Guillaume <cylgom>)
 
     This program is free software: you can redistribute it and/or modify
