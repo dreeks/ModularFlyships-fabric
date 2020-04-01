@@ -1,35 +1,36 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "modularflyships",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Modular Flyships",
+  "description": "This mod adds a vehicule to travel the world, with upgrade, multiple seats and more!",
   "authors": [
-    "Me!"
+    "Oxodao",
+    "cylgom"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://dreeks.xyz/",
+    "sources": "https://github.com/Dreeks/ModularFlyships-fabric"
   },
 
-  "license": "CC0-1.0",
+  "license": "GPLv3",
   "icon": "assets/modid/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "xyz.dreeks.modularflyships.ModularFlyships"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+
   ],
 
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.15.x"
+    "minecraft": "1.16-alpha.20.11.a"
   },
   "suggests": {
     "flamingo": "*"
