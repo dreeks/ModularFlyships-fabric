@@ -21,6 +21,9 @@
   "entrypoints": {
     "main": [
       "xyz.dreeks.modularflyships.ModularFlyships"
+    ],
+    "client": [
+      "xyz.dreeks.modularflyships.ClientInitializer"
     ]
   },
   "mixins": [
