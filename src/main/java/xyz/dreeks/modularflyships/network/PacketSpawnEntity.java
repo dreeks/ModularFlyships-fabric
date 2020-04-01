@@ -18,18 +18,14 @@ import java.util.UUID;
  */
 public class PacketSpawnEntity implements Packet<ClientPlayPacketListener> {
 
-    private int id;
-    private UUID uuid;
-    private int entityTypeId;
-    private double x;
-    private double y;
-    private double z;
-    private int velocityX;
-    private int velocityY;
-    private int velocityZ;
-    private byte yaw;
-    private byte pitch;
-    private byte headYaw;
+    public int id;
+    public UUID uuid;
+    public int entityTypeId;
+    public double x, y, z;
+    public int velocityX, velocityY, velocityZ;
+    public byte yaw;
+    public byte pitch;
+    public byte headYaw;
 
     public PacketSpawnEntity() {
     }
@@ -89,63 +85,4 @@ public class PacketSpawnEntity implements Packet<ClientPlayPacketListener> {
 
     }
 
-    @Environment(EnvType.CLIENT)
-    public int getId() {
-        return this.id;
-    }
-
-    @Environment(EnvType.CLIENT)
-    public UUID getUuid() {
-        return this.uuid;
-    }
-
-    @Environment(EnvType.CLIENT)
-    public int getEntityTypeId() {
-        return this.entityTypeId;
-    }
-
-    @Environment(EnvType.CLIENT)
-    public double getX() {
-        return this.x;
-    }
-
-    @Environment(EnvType.CLIENT)
-    public double getY() {
-        return this.y;
-    }
-
-    @Environment(EnvType.CLIENT)
-    public double getZ() {
-        return this.z;
-    }
-
-    @Environment(EnvType.CLIENT)
-    public int getVelocityX() {
-        return this.velocityX;
-    }
-
-    @Environment(EnvType.CLIENT)
-    public int getVelocityY() {
-        return this.velocityY;
-    }
-
-    @Environment(EnvType.CLIENT)
-    public int getVelocityZ() {
-        return this.velocityZ;
-    }
-
-    @Environment(EnvType.CLIENT)
-    public byte getYaw() {
-        return this.yaw;
-    }
-
-    @Environment(EnvType.CLIENT)
-    public byte getPitch() {
-        return this.pitch;
-    }
-
-    @Environment(EnvType.CLIENT)
-    public byte getHeadYaw() {
-        return this.headYaw;
-    }
 }

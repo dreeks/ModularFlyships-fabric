@@ -16,7 +16,7 @@ public class MFSEntities {
             FabricEntityTypeBuilder.create(
                     EntityCategory.MISC,
                     ((type, world) -> new FlyshipEntity(world))
-            ).size(new EntityDimensions(1f, 1f, true))
+            ).size(new EntityDimensions(1.375F, 0.5625F, false))
              .build()
     );
 

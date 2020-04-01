@@ -22,7 +22,6 @@ public class FlyshipRendererEntity extends EntityRenderer<FlyshipEntity> {
     @Override
     public void render(FlyshipEntity boatEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
         // Never called for some reasons
-        System.out.println("Rendering boat entity");
         matrixStack.push();
         matrixStack.translate(0.0D, 0.375D, 0.0D);
         matrixStack.multiply(Vector3f.POSITIVE_Y.getDegreesQuaternion(180.0F - f));
@@ -40,17 +39,7 @@ public class FlyshipRendererEntity extends EntityRenderer<FlyshipEntity> {
     }
 
     @Override
-    public boolean shouldRender(FlyshipEntity entity, Frustum visibleRegion, double cameraX, double cameraY, double cameraZ) {
-        boolean should = super.shouldRender(entity, visibleRegion, cameraX, cameraY, cameraZ);
-
-        System.out.println("SHOULD RENDER ? (" + should + ")");
-
-        return should;
-    }
-
-    @Override
     public Identifier getTexture(FlyshipEntity entity) {
-        System.out.println("Getting texture");
         return new Identifier("textures/entity/boat/oak.png");
     }
 

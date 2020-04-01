@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "compatibilityLevel": "JAVA_8",
+  "package": "xyz.dreeks.modularflyships.mixins",
+  "client": [
+    "MixinEntitySpawn"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

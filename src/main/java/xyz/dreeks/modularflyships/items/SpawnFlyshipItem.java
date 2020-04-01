@@ -21,7 +21,7 @@ public class SpawnFlyshipItem extends BaseItem {
         FlyshipEntity fse = new FlyshipEntity(context.getWorld());
 
         BlockPos pos = context.getBlockPos();
-        fse.setPos(pos.getX(), pos.getY(), pos.getZ());
+        fse.setPos(pos.getX(), pos.getY() + 1, pos.getZ());
 
         if (context.getWorld().spawnEntity(fse)){
             context.getStack().decrement(1);

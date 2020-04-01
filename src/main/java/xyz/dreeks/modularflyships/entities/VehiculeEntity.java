@@ -4,11 +4,10 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.Packet;
-import net.minecraft.util.ActionResult;
+import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import net.minecraft.util.Hand;
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
-import xyz.dreeks.modularflyships.network.PacketSpawnEntity;
 
 public abstract class VehiculeEntity extends Entity {
 
@@ -18,12 +17,29 @@ public abstract class VehiculeEntity extends Entity {
 
     @Override
     public Packet<?> createSpawnPacket() {
-        return new PacketSpawnEntity();
+        return new EntitySpawnS2CPacket(this);
     }
 
     @Override
-    public ActionResult interactAt(PlayerEntity player, Vec3d hitPos, Hand hand) {
-        player.startRiding(this);
-        return ActionResult.PASS;
+    public boolean interact(PlayerEntity player, Hand hand) {
+        if (player.shouldCancelInteraction()) {
+            return false;
+        } else {
+            return !this.world.isClient ? player.startRiding(this) : false;
+        }
+    }
+
+    @Override
+    public Box getHardCollisionBox(Entity collidingEntity) {
+        return collidingEntity.getBoundingBox();
+    }
+
+    public Box getCollisionBox() {
+        return this.getBoundingBox();
+    }
+
+    @Override
+    public boolean collides() {
+        return true;
     }
 }
