@@ -1,12 +1,10 @@
 package xyz.dreeks.modularflyships.entities;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class FlyshipEntity extends VehiculeEntity {
+public class FlyshipEntity extends VehicleEntity {
 
     public FlyshipEntity(World world) {
         super(MFSEntities.flyshipType, world);
@@ -21,10 +19,7 @@ public class FlyshipEntity extends VehiculeEntity {
         this.prevZ = z;
     }
 
-    @Override
-    protected void initDataTracker() {
 
-    }
 
     @Override
     protected void readCustomDataFromTag(CompoundTag tag) {
@@ -39,6 +34,7 @@ public class FlyshipEntity extends VehiculeEntity {
     @Override
     public void tick() {
         // System.out.println("Entity ticking");
+        super.tick();
     }
 
 }

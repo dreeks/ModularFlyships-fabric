@@ -1,14 +1,12 @@
 package xyz.dreeks.modularflyships.network;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
-import xyz.dreeks.modularflyships.entities.VehiculeEntity;
+import xyz.dreeks.modularflyships.entities.VehicleEntity;
 
 import java.io.IOException;
 import java.util.UUID;
@@ -30,7 +28,7 @@ public class PacketSpawnEntity implements Packet<ClientPlayPacketListener> {
     public PacketSpawnEntity() {
     }
 
-    public PacketSpawnEntity(VehiculeEntity entity) {
+    public PacketSpawnEntity(VehicleEntity entity) {
         this.id = entity.getEntityId();
         this.uuid = entity.getUuid();
         this.entityTypeId = Registry.ENTITY_TYPE.getRawId(entity.getType());

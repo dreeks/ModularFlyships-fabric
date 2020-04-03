@@ -1,5 +1,7 @@
 {
   "itemGroup.modularflyships.main": "Modular Flyships",
 
-  "item.modularflyships.spawn_flyship": "Vaisseau"
+  "item.modularflyships.spawn_flyship": "Vaisseau",
+
+  "key.modularflyships.down": "Perdre de l'altitude"
 }
