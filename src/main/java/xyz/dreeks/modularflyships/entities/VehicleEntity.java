@@ -87,8 +87,8 @@ public abstract class VehicleEntity extends Entity {
         //this.tickLerp();
 
         if (this.isLogicalSideForUpdatingMovement()) {
-            this.updateVelocity();
-            this.move(MovementType.SELF, this.getVelocity());
+            //this.updateVelocity();
+            //this.move(MovementType.SELF, this.getVelocity());
         } else {
             this.move(MovementType.SELF, Vec3d.ZERO);
         }

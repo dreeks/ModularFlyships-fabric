@@ -1,4 +1,4 @@
-package xyz.dreeks.modularflyships.mixins;
+package xyz.dreeks.modularflyships.mixins.client;
 
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.entity.Entity;
@@ -11,7 +11,7 @@ import xyz.dreeks.modularflyships.entities.FlyshipEntity;
 import xyz.dreeks.modularflyships.entities.MFSEntities;
 
 @Mixin(ClientPlayNetworkHandler.class)
-public class MixinEntitySpawn {
+public class EntitySpawnMixin {
 
     @Inject(at = @At("TAIL"), method="onEntitySpawn")
     public void onEntitySpawn(EntitySpawnS2CPacket packet, CallbackInfo cbi) {
